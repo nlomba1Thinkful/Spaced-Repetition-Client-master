@@ -1,0 +1,83 @@
+.learn-container {
+}
+
+.learn-container > div > span {
+  font-size: 26px;
+  font-weight: bold;
+  color: #0888ff;
+}
+
+.learn-container > div > p {
+  font-size: 20px;
+}
+
+.learn-container > div > p > span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.learn-container > div > div {
+  margin-top: 25px;
+  font-size: 22px;
+}
+
+#learn_form {
+  width: 100%;
+  margin: auto;
+  font-size: 19px;
+}
+
+#learn_form > div {
+  width: 90%;
+  margin: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.submit {
+  font-size: 20px;
+  padding: 15px;
+  width: 100%;
+}
+
+.DisplayScore {
+  font-size: 22px;
+}
+
+.DisplayScore > p > span {
+  font-weight: bold;
+}
+
+.correct {
+  color: rgb(69, 110, 163);
+  font-size: 30px;
+}
+
+.incorrect {
+  color: rgb(69, 163, 148);
+  font-size: 30px;
+}
+
+@media all and (min-width: 500px) {
+  #learn_form {
+    width: 417px;
+    font-size: 22px;
+  }
+
+  .learn-container > div > p {
+    width: 500px;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .learn-container > div > div {
+    font-size: 19px;
+  }
+
+  .submit {
+    width: 275px;
+  }
+}

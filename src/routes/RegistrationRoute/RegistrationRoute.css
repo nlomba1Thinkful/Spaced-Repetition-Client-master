@@ -1,0 +1,18 @@
+.reg-log-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.reg-log-form > form {
+  text-align: left;
+  margin: auto;
+}
+
+.reg-log-form > p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}

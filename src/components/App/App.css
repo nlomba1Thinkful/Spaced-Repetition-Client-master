@@ -1,0 +1,54 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-color: white;
+}
+
+.loading-img {
+  text-align: center;
+  height: 95px;
+}
+
+.loading-img > img {
+  width: 95px;
+}
+
+.loading-img-placeholder {
+  height: 95px;
+}
+
+a {
+  color: #0888ff;
+  text-decoration: none;
+}
+
+.alert {
+  font-size: 20px;
+}
+
+.bounce-animate {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounceIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+}
+
+.rotate-animate {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: rotateInDownRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+}
+
+.fade-animate {
+  animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.4s; /* don't forget to set a duration! */
+}
