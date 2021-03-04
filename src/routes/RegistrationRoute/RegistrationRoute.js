@@ -5,16 +5,14 @@ import './RegistrationRoute.css';
 
 class RegistrationRoute extends Component {
   static defaultProps = {
-    location: {},
     history: {
       push: () => {},
     },
   };
 
   handleRegistrationSuccess = () => {
-    const { location, history } = this.props;
-    const destination = (location.state || {}).from || '/';
-    history.push(destination);
+    const { history } = this.props;
+    history.push('/login');
   };
 
   render() {
