@@ -4,11 +4,14 @@ import { Input, Required, Label } from '../Form/Form';
 import AuthApiService from '../../services/auth-api-service';
 import Button from '../Button/Button';
 import './RegistrationForm.css';
+import UserContext from '../../contexts/UserContext';
 
 class RegistrationForm extends Component {
   static defaultProps = {
     onRegistrationSuccess: () => {},
   };
+
+  static contextType = UserContext;
 
   state = { error: null };
 
@@ -17,16 +20,16 @@ class RegistrationForm extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault();
     const { name, username, password } = ev.target;
-    AuthApiService.postUser({
-      name: name.value,
+    AuthApiService.postLogin({           //changed
+      // name: name.value,            commented out
       username: username.value,
       password: password.value,
-    })
+    });
       .then((user) => {
         name.value = '';
         username.value = '';
-        console.log(user);
         password.value = '';
+        this.context.processLogin(res.authToken); //this is added
         this.props.onRegistrationSuccess();
       })
       .catch((res) => {
