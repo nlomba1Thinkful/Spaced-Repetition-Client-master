@@ -20,11 +20,12 @@ class RegistrationForm extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault();
     const { name, username, password } = ev.target;
-    AuthApiService.postLogin({           //changed
+    AuthApiService.postLogin({
+      //changed
       // name: name.value,            commented out
       username: username.value,
       password: password.value,
-    });
+    })
       .then((user) => {
         name.value = '';
         username.value = '';
