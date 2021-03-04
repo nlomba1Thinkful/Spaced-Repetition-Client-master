@@ -25,6 +25,7 @@ class RegistrationForm extends Component {
       .then((user) => {
         name.value = '';
         username.value = '';
+        console.log(user);
         password.value = '';
         this.props.onRegistrationSuccess();
       })
