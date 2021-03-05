@@ -29,7 +29,6 @@ class RegistrationForm extends Component {
           username: username.value,
           password: password.value,
         });
-      })
       .then((res) => {
         name.value = '';
         username.value = '';
@@ -37,6 +36,7 @@ class RegistrationForm extends Component {
         this.context.processLogin(res.authToken);
         this.props.onRegistrationSuccess();
       })
+    })
       .catch((res) => {
         this.setState({ error: res.error });
       });
