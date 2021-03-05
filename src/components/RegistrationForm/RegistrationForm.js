@@ -21,11 +21,15 @@ class RegistrationForm extends Component {
       name: name.value,
       username: username.value,
       password: password.value,
+    }) .then((res) => {AuthApiService.postLogin({
+      username: username.value,
+      password: password.value,
     })
-      .then((user) => {
+      .then((res) => {
         name.value = '';
         username.value = '';
         password.value = '';
+        this.context.processLogin(res.authToken);
         this.props.onRegistrationSuccess();
       })
       .catch((res) => {
