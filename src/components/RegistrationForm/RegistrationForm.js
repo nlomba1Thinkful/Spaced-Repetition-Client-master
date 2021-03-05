@@ -4,6 +4,7 @@ import { Input, Required, Label } from '../Form/Form';
 import AuthApiService from '../../services/auth-api-service';
 import Button from '../Button/Button';
 import './RegistrationForm.css';
+import UserContext from '../../contexts/UserContext';
 
 class RegistrationForm extends Component {
   static defaultProps = {
@@ -11,6 +12,7 @@ class RegistrationForm extends Component {
   };
 
   state = { error: null };
+  static contextType = UserContext;
 
   firstInput = React.createRef();
 
